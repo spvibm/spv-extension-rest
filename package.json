@@ -1,8 +1,8 @@
 {
-  "name": "xdome-extension-rest",
+  "name": "spv-rest-extension",
   "version": "0.1.1",
   "license": "MIT",
-  "description": "xdome-extension-rest",
+  "description": "spv-rest-extension",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha --recursive",
@@ -27,20 +27,5 @@
       "pre-commit": "npm run lint && npm run test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/x-dome/xdome-extension-rest.git"
-  },
-  "bugs": {
-    "url": "https://github.com/x-dome/xdome-extension-rest/issues"
-  },
-  "homepage": "https://github.com/x-dome/xdome-extension-rest",
-  "author": "Joel De La Torriente <jjdltc@gmail.com> (https://github.com/jjdltc)",
-  "maintainers": [
-    "Joel De La Torriente <jjdltc@gmail.com> (http://jjdltc.com)"
-  ],
-  "contributors": [
-    "Joel De La Torriente <jjdltc@gmail.com> (http://jjdltc.com)"
-  ]
+  }
 }

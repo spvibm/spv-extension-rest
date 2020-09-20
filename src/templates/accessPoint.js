@@ -4,7 +4,7 @@
 module.exports = `
 "use strict";
 
-const commonAccessPoint     = require("spv-extension-rest").support.accessPoint;
+const commonAccessPoint     = require("spv-rest-extension").support.accessPoint;
 
 class {className} extends commonAccessPoint{
     constructor(router){
