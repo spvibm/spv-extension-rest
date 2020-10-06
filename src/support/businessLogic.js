@@ -20,8 +20,8 @@ class commonBusinessLogic {
 
     async getInputSchemeValidator(data){ return true; }
     async getOutputSchemeValidator(data){ return true; }
-    async getInputOverride(data){ this.request.dome.input = data; }
-    async getOutputOverride(data){ this.response.dome.output = data; }
+    async getInputOverride(data){ this.request.spv.input = data; }
+    async getOutputOverride(data){ this.response.spv.output = data; }
     async getProcess(){ return { data : "get" }; }
     async get(){
         let isValidInput                = await this.schemeProcess("input", "get", this.request);
@@ -32,7 +32,7 @@ class commonBusinessLogic {
 
             if(isValidOutput && !this.response.headersSent){
                 if(!this.getResponseOverride){
-                    this.response.status(200).json(this.response.dome.output);
+                    this.response.status(200).json(this.response.spv.output);
                 }
                 else{
                     this.getResponseOverride();
@@ -43,8 +43,8 @@ class commonBusinessLogic {
 
     async postInputSchemeValidator(data){ return true; }
     async postOutputSchemeValidator(data){ return true; }
-    async postInputOverride(data){ this.request.dome.input = data; }
-    async postOutputOverride(data){ this.response.dome.output = data; }
+    async postInputOverride(data){ this.request.spv.input = data; }
+    async postOutputOverride(data){ this.response.spv.output = data; }
     async postProcess(){ return { data : "post" }; }
     async post(){
         let isValidInput                = await this.schemeProcess("input", "post", this.request);
@@ -55,7 +55,7 @@ class commonBusinessLogic {
 
             if(isValidOutput && !this.response.headersSent){
                 if(!this.postResponseOverride){
-                    this.response.status(200).json(this.response.dome.output);
+                    this.response.status(200).json(this.response.spv.output);
                 }
                 else{
                     this.postResponseOverride();
@@ -66,8 +66,8 @@ class commonBusinessLogic {
 
     async putInputSchemeValidator(data){ return true; }
     async putOutputSchemeValidator(data){ return true; }
-    async putInputOverride(data){ this.request.dome.input = data; }
-    async putOutputOverride(data){ this.response.dome.output = data; }
+    async putInputOverride(data){ this.request.spv.input = data; }
+    async putOutputOverride(data){ this.response.spv.output = data; }
     async putProcess(){ return { data : "put" }; }
     async put(){
         let isValidInput                = await this.schemeProcess("input", "put", this.request);
@@ -78,7 +78,7 @@ class commonBusinessLogic {
 
             if(isValidOutput && !this.response.headersSent){
                 if(!this.putResponseOverride){
-                    this.response.status(200).json(this.response.dome.output);
+                    this.response.status(200).json(this.response.spv.output);
                 }
                 else{
                     this.putResponseOverride();
@@ -89,8 +89,8 @@ class commonBusinessLogic {
 
     async deleteInputSchemeValidator(data){ return true; }
     async deleteOutputSchemeValidator(data){ return true; }
-    async deleteInputOverride(data){ this.request.dome.input = data; }
-    async deleteOutputOverride(data){ this.response.dome.output = data; }
+    async deleteInputOverride(data){ this.request.spv.input = data; }
+    async deleteOutputOverride(data){ this.response.spv.output = data; }
     async deleteProcess(){ return { data : "delete" }; }
     async delete(){
         let isValidInput                = await this.schemeProcess("input", "delete", this.request);
@@ -101,7 +101,7 @@ class commonBusinessLogic {
 
             if(isValidOutput && !this.response.headersSent){
                 if(!this.deleteResponseOverride){
-                    this.response.status(200).json(this.response.dome.output);
+                    this.response.status(200).json(this.response.spv.output);
                 }
                 else{
                     this.deleteResponseOverride();
