@@ -25,8 +25,8 @@ class commonAccessPoint {
     commonEntryRoutes(){
         this.router.route(`${this.basePath}*`)
             .all((req, res, next)=>{
-                req.dome = {};
-                res.dome = {};
+                req.spv = {};
+                res.spv = {};
                 /* @TODO: Set request id */
                 next();
             });
@@ -53,8 +53,8 @@ class commonAccessPoint {
             : verb;
 
         this.router.route(`${this.basePath}`)[verb](function(req, res){
-            req.dome = {};
-            res.dome = {};
+            req.spv = {};
+            res.spv = {};
             const businessLogicInstance = new self.businessLogic(...arguments);
             businessLogicInstance[callbackName](...arguments);
         });
